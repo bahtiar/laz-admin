@@ -3,14 +3,14 @@
 	<div class="m-container m-container--fluid m-container--full-height">
 		<div class="m-stack m-stack--ver m-stack--desktop">
 			<!-- BEGIN: Brand -->
-			<div class="m-stack__item m-brand m-brand--skin-dark ">
+			<div class="bg-welcome m-stack__item m-brand m-brand--skin-dark ">
 				<div class="m-stack m-stack--ver m-stack--general">
 					<div class="m-stack__item m-stack__item--middle m-brand__logo">
-						<a href="{{ url('/') }}" class="m-brand__logo-wrapper">
-									ACP
+						<a href="{{ url('/') }}" class="name-welcome m-brand__logo-wrapper">
+									Welcome, <b>DKNG</b>
 						</a>
 					</div>
-					<div class="m-stack__item m-stack__item--middle m-brand__tools">
+					<div class="m-stack__item m-stack__item--middle m-brand__tools" style="display: none;">
 						<!-- BEGIN: Left Aside Minimize Toggle -->
 						<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block">
 							<span></span>
@@ -26,7 +26,7 @@
 							<span></span>
 						</a> --}}
 						<!-- END -->
-<!-- BEGIN: Topbar Toggler -->
+				<!-- BEGIN: Topbar Toggler -->
 						{{-- <a id="m_aside_header_topbar_mobile_toggle" href="javascript:;" class="m-brand__icon m--visible-tablet-and-mobile-inline-block">
 							<i class="flaticon-more"></i>
 						</a> --}}
@@ -44,14 +44,14 @@
 				<div id="m_header_topbar" class="m-topbar m-stack m-stack--ver m-stack--general">
 					<div class="m-stack__item m-topbar__nav-wrapper">
 						<ul class="m-topbar__nav m-nav m-nav--inline">
-							<li class="m-nav__item m-topbar__notifications m-topbar__notifications--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-center 	m-dropdown--mobile-full-width" data-dropdown-toggle="click" data-dropdown-persistent="true">
+							<li class="m-nav__item m-topbar__notifications m-topbar__notifications--img m-dropdown m-dropdown--large m-dropdown--header-bg-fill m-dropdown--arrow m-dropdown--align-center 	m-dropdown--mobile-full-width" data-dropdown-toggle="click" data-dropdown-persistent="true" style="display: none;">
 								<a href="#" class="m-nav__link m-dropdown__toggle" id="m_topbar_notification_icon">
 									<span class="m-nav__link-badge m-badge m-badge--dot m-badge--dot-small m-badge--danger"></span>
 									<span class="m-nav__link-icon">
 										<i class="flaticon-music-2"></i>
 									</span>
 								</a>
-								<div class="m-dropdown__wrapper" style="margin-left: -290px;">
+								<div class="m-dropdown__wrapper" style="margin-left: -290px; ">
 									<span class="m-dropdown__arrow m-dropdown__arrow--center" style="margin-left: 80px;"></span>
 									<div class="m-dropdown__inner">
 										<div class="m-dropdown__header m--align-center" style="background: url({{ asset('/img/notification_bg.jpg') }}); background-size: cover;">

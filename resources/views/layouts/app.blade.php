@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>GG Admin</title>
+    <title>Lazada Admin</title>
 
     <!--begin::Web font -->
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
@@ -56,7 +56,11 @@
     <script src="{{ asset('/js/scripts.bundle.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/js/general.js') }}" type="text/javascript"></script>
     <!--end::Base Scripts -->
-
+    <script type="text/javascript">
+    $("#tableContainer .scrollContent tr").click(function(){
+        window.location = $(this).data("href");
+    });
+    </script>
     <!-- Scripts -->
 </body>
 </html>

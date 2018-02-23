@@ -6,15 +6,15 @@ use Illuminate\Http\Request;
 use Validator;
 use Auth;
 
-class AnalyticsController extends Controller
+class KpiController extends Controller
 {
 
 
     public function __construct()
     {
       $this->data = array();
-      $this->data['parent']    = 'analytics';
-      $this->data['page']      = 'analytics';
+      $this->data['parent']    = 'kpi';
+      $this->data['page']      = 'kpi';
     }
     /**
      * Display a listing of the resource.
@@ -24,7 +24,13 @@ class AnalyticsController extends Controller
     public function index()
     {
         //
-        return View('analytics')->with('arr', $this->data);
+        return View('kpi')->with('arr', $this->data);
+    }
+
+    public function detail()
+    {
+        //
+        return View('kpi-detail')->with('arr', $this->data);
     }
 
     public function data(Request $request)

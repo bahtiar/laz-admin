@@ -37,11 +37,12 @@ Route::middleware('auth')->group(function() {
         Route::delete('/{id}','AgenController@destroy')->name('agen.destroy');
     });
 
-    Route::prefix('analytics')->group(function(){
-        Route::get('/','AnalyticsController@index')->name('analytics.index');
-        Route::get('/{id}/edit','AnalyticsController@edit')->name('analytics.edit');
-        Route::put('/{id}','AnalyticsController@update')->name('analytics.update');
-        Route::delete('/{id}','AnalyticsController@destroy')->name('analytics.destroy');
+    Route::prefix('kpi')->group(function(){
+        Route::get('/','KpiController@index')->name('kpi.index');
+        Route::get('/detail/{id}','KpiController@detail')->name('kpi.detail');
+        Route::get('/{id}/edit','KpiController@edit')->name('kpi.edit');
+        Route::put('/{id}','KpiController@update')->name('kpi.update');
+        Route::delete('/{id}','KpiController@destroy')->name('kpi.destroy');
     });
 
 
